@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ToolbarTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textColorPrimary">#e78200</item>
+        <item name="android:textColorSecondary">#e78200</item>
+    </style>`
+</resources>

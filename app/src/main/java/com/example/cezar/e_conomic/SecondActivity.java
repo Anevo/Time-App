@@ -3,44 +3,44 @@ package com.example.cezar.e_conomic;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class SecondActivity extends AppCompatActivity {
+    Toolbar toolbar;
 
-    String EmailHolder;
-    TextView Email;
-    Button LogOUT ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+    }
 
-        Email = (TextView)findViewById(R.id.textView1);
-        LogOUT = (Button)findViewById(R.id.button1);
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.second_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
 
-        Intent intent = getIntent();
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
 
-        // Receiving User Email Send By MainActivity.
-        EmailHolder = intent.getStringExtra(MainActivity.UserEmail);
+        int id = item.getItemId();
 
-        // Setting up received email to TextView.
-        Email.setText(Email.getText().toString()+ EmailHolder);
+        if(id == R.id.id_language){
+            Toast.makeText(this, "About is clicked", Toast.LENGTH_SHORT).show();
 
-        // Adding click listener to Log Out button.
-        LogOUT.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        }else if(id == R.id.id_logout){
+            Intent intent = new Intent(SecondActivity.this, MainActivity.class);
+            startActivity(intent);
+        }
 
-                //Finishing current DashBoard activity on button click.
-                finish();
-
-                Toast.makeText(SecondActivity.this,"Log Out Successfull", Toast.LENGTH_LONG).show();
-
-            }
-        });
-
+        return super.onOptionsItemSelected(item);
     }
 }
