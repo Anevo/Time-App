@@ -1,6 +1,13 @@
 package com.example.cezar.e_conomic;
 
+import android.app.Service;
 import android.content.Intent;
+import android.os.Handler;
+import android.os.HandlerThread;
+import android.os.IBinder;
+import android.os.Looper;
+import android.os.Message;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -52,14 +59,17 @@ public class MainActivity extends AppCompatActivity {
                 //LoginFunction();
             }
         });
+
     }
 
     private void validate (String usrEmail, String userPassword){
         if ((usrEmail.equals("test@test.com")) && (userPassword.equals("test"))){
-            Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+            Intent intent = new Intent(MainActivity.this, WorkActivity.class);
             startActivity(intent);
         }
     }
+
+
 }
 
 

@@ -43,22 +43,4 @@ public class LoginRegActivity extends AppCompatActivity implements View.OnClickL
                 break;
         }
     }
-    /*
-        Login_first.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(LoginRegActivity.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        Register_first.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(LoginRegActivity.this, RegisterActivity.class);
-                startActivity(intent);
-            }
-        });*/
-
-
 }

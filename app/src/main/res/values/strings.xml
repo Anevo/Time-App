@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">E-conomic</string>
+    <string name="message_minutes">Please Enter Minutes...</string>
+    <string name="title_activity_work">WorkActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="tab_text_1">Record now</string>
+    <string name="tab_text_2">Past records</string>
 </resources>
